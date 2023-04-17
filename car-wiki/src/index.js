@@ -11,15 +11,32 @@ class Car{
   }
 }
 
+class Welcome{
+  constructor(msg){
+    this.message=msg;
+  }
+}
+class Message{
+  constructor(mess){
+    this.message=mess;
+  }
+}
+
 const myCar = new Car("Ford");
+const wcm=new Welcome("This is a page for auto enthusiasts. Similar to wikipedia, but for cars.");
+const anothermsg=new Message(<h1>Welcome. I hope you will enjoy in our page.</h1>);
+
 const welcome=<h1>This is a page for auto enthusiasts. Similar to wikipedia, but for cars.</h1>
 const message=<p>Welcome. I hope you will enjoy in our page. </p>
+const welc=wcm.message
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
 root.render(
   //myCar.brand
+   //welc
+   anothermsg.message
 );
 
 
