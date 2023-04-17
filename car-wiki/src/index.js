@@ -4,12 +4,25 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+class Car{
+  constructor(name){
+    this.brand=name;
+  }
+}
+
+const myCar = new Car("Ford");
+const welcome=<h1>This is a page for auto enthusiasts. Similar to wikipedia, but for cars.</h1>
+const message=<p>Welcome. I hope you will enjoy in our page. </p>
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  //myCar.brand
 );
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
