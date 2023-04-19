@@ -14,17 +14,6 @@ class Car{
   }
 }
 
-class Welcome{
-  constructor(msg){
-    this.message=msg;
-  }
-}
-class Message{
-  constructor(mess){
-    this.message=mess;
-  }
-}
-
 class Model extends Car{
   constructor(name,mod){
     super(name);
@@ -32,6 +21,24 @@ class Model extends Car{
   }
   show(){
     return this.present()+', it is a ' + this.model;
+  }
+}
+
+class Welcome{
+  constructor(msges){
+    this.message=msges;
+  }
+  welcomeWagon(){
+     return this.message;
+  }
+}
+class Message extends Welcome{
+  constructor(msg,mess){
+    super(msg);
+    this.messag=mess;
+  }
+  showMessage(){
+return this.welcomeWagon()+' '+this.messag;
   }
 }
 
@@ -46,12 +53,17 @@ const welc=wcm.message
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const newCar=new Model("Ford","Mustang");
 
+
+const welco=new Welcome("This is a page for auto enthusiasts. Similar to wikipedia, but for cars.");
+const newMessage= new Message("This is a page for auto enthusiasts. Similar to wikipedia, but for cars.","Welcome. I hope you will enjoy in our page.");
+
 root.render(
   //myCar.brand
    //welc
    //anothermsg.message
    //myCar.present()
-   newCar.show()
+   //newCar.show()
+   newMessage.showMessage()
 );
 
 
