@@ -9,6 +9,9 @@ class Car{
   constructor(name){
     this.brand=name;
   }
+  present(){
+    return 'I have a '+this.brand;
+  }
 }
 
 class Welcome{
@@ -37,6 +40,7 @@ root.render(
   //myCar.brand
    //welc
    //anothermsg.message
+   myCar.present()
 );
 
 
