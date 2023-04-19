@@ -25,6 +25,16 @@ class Message{
   }
 }
 
+class Model extends Car{
+  constructor(name,mod){
+    super(name);
+    this.model=mod;
+  }
+  show(){
+    return this.present()+', it is a ' + this.model;
+  }
+}
+
 const myCar = new Car("Ford");
 const wcm=new Welcome("This is a page for auto enthusiasts. Similar to wikipedia, but for cars.");
 const anothermsg=new Message(<h1>Welcome. I hope you will enjoy in our page.</h1>);
@@ -34,13 +44,14 @@ const message=<p>Welcome. I hope you will enjoy in our page. </p>
 const welc=wcm.message
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
+const newCar=new Model("Ford","Mustang");
 
 root.render(
   //myCar.brand
    //welc
    //anothermsg.message
-   myCar.present()
+   //myCar.present()
+   newCar.show()
 );
 
 
