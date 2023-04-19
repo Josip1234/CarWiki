@@ -36,7 +36,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   //myCar.brand
    //welc
-   anothermsg.message
+   //anothermsg.message
 );
 
 
