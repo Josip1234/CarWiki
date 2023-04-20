@@ -12,6 +12,7 @@ class Car{
   present(){
     return 'I have a '+this.brand;
   }
+    manufacturerName=()=>this.brand;
 }
 
 class Model extends Car{
@@ -22,7 +23,10 @@ class Model extends Car{
   show(){
     return this.present()+', it is a ' + this.model;
   }
+  modelName=()=>this.model;
+  carInformation=(model) => "Can you tell me manufacturer of this model?" + this.model+" Manufacturer of that model is "+this.manufacturerName();
 }
+
 
 class Welcome{
   constructor(msges){
@@ -30,6 +34,10 @@ class Welcome{
   }
   welcomeWagon(){
      return this.message;
+  }
+
+  dateAndTime=()=>{
+    return "20.04.2023. 21:29";
   }
 }
 class Message extends Welcome{
@@ -40,7 +48,22 @@ class Message extends Welcome{
   showMessage(){
 return this.welcomeWagon()+' '+this.messag;
   }
+  spacingBetweenLines=function(){
+  return <br/>;
 }
+messageSentAt=()=>"20.04.2023. 21:31";
+
+}
+
+class User{
+  constructor(nickname,dateOfBirth){
+    this.nick=nickname;
+    this.dofb=dateOfBirth;
+  }
+  updateNickname=update=>"Do you really want to change your nickname?"+update;
+}
+
+
 
 const myCar = new Car("Ford");
 const wcm=new Welcome("This is a page for auto enthusiasts. Similar to wikipedia, but for cars.");
@@ -57,13 +80,22 @@ const newCar=new Model("Ford","Mustang");
 const welco=new Welcome("This is a page for auto enthusiasts. Similar to wikipedia, but for cars.");
 const newMessage= new Message("This is a page for auto enthusiasts. Similar to wikipedia, but for cars.","Welcome. I hope you will enjoy in our page.");
 
+const newModel=new Model("Mercedes-benz","Slr Mclaren");
+
+const user = new User("Jobo","05.11.1992.")
+
 root.render(
   //myCar.brand
    //welc
    //anothermsg.message
    //myCar.present()
    //newCar.show()
-   newMessage.showMessage()
+   //newMessage.showMessage()
+   //newMessage.spacingBetweenLines
+   //wcm.dateAndTime()
+   //newMessage.messageSentAt()
+   //newModel.carInformation(newModel.modelName())
+   user.updateNickname("Yes")
 );
 
 
