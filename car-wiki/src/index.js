@@ -24,6 +24,7 @@ class Model extends Car{
     return this.present()+', it is a ' + this.model;
   }
   modelName=()=>this.model;
+  //This works only if the function has only one statement.
   carInformation=(model) => "Can you tell me manufacturer of this model?" + this.model+" Manufacturer of that model is "+this.manufacturerName();
 }
 
@@ -60,6 +61,7 @@ class User{
     this.nick=nickname;
     this.dofb=dateOfBirth;
   }
+    //This works only if the function has only one statement.
   updateNickname=update=>"Do you really want to change your nickname?"+update;
 }
 
@@ -84,6 +86,19 @@ const newModel=new Model("Mercedes-benz","Slr Mclaren");
 
 const user = new User("Jobo","05.11.1992.")
 
+class Header{
+  constructor(){
+    this.cssUrl="index.css";
+    this.jsUrl="index.js";
+  }
+  addUrl=function(){
+    return this.cssUrl;
+  }
+  addJavascript=()=>{return this.jsUrl;}
+
+}
+const header=new Header();
+
 root.render(
   //myCar.brand
    //welc
@@ -95,7 +110,9 @@ root.render(
    //wcm.dateAndTime()
    //newMessage.messageSentAt()
    //newModel.carInformation(newModel.modelName())
-   user.updateNickname("Yes")
+   //user.updateNickname("Yes")
+   //header.addUrl()
+   header.addJavascript()
 );
 
 
