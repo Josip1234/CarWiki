@@ -104,7 +104,7 @@ root.render(
    //welc
    //anothermsg.message
    //myCar.present()
-   //newCar.show()
+   newCar.show()
    //newMessage.showMessage()
    //newMessage.spacingBetweenLines
    //wcm.dateAndTime()
@@ -112,7 +112,7 @@ root.render(
    //newModel.carInformation(newModel.modelName())
    //user.updateNickname("Yes")
    //header.addUrl()
-   header.addJavascript()
+   //header.addJavascript()
 );
 
 
